@@ -1,7 +1,17 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 function App() {
-  return <h1>Porra</h1>
-}
-
-export default App;
+  <Router>
+    <Switch>
+      <Route>
+    </Switch>
+  </Router>
+    }
+    
+    
+    export default App;
