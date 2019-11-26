@@ -1,23 +1,26 @@
 import styled from 'styled-components';
+import background from '../../assets/bg-home.jpeg';
 
 export const Container = styled.div`
     width: 100%;
     background: #eee; 
-    padding-left: 10px;
-    padding-right: 10px;
 `;
 
 export const Introducao = styled.section`
     width: 100%;
-    max-width: 960px;
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
+    background: url(${background}) no-repeat;
+    background-size: cover;
 `;
 
 export const Title = styled.h1`
-    font-size: 20px;
+    font-size: 30px;
+    max-width: 960px;
+    margin: 0 auto;
     margin-bottom: 10px;
+    color: #000;
 `;
 
 export const ContentIntroducao = styled.div`
@@ -36,9 +39,11 @@ export const ContentInfo = styled.div`
 `;
 
 export const TextInfo = styled.h1`
-    font-size: 15px;
+    font-size: 17px;
     text-align: justify;
     text-indent: 50px;
+    color: #000;
+    line-height: 190%;
 `;
 
 export const ImageInfo = styled.img`

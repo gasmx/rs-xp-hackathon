@@ -33,6 +33,10 @@ export const Config = styled.div`
       color: #fff;
       font-size: 20px;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const Button = styled.button`

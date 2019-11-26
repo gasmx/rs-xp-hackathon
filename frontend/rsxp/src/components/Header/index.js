@@ -13,9 +13,9 @@ export default function Header(props) {
                     </Link>
                 </Logo>
                 <Config>
-                    <Link to="/#cursos">
+                    <a href="#cursos">
                         <span>Cursos</span>
-                    </Link>
+                    </a>
                     <Link to="/vagas">
                         <span>Vagas</span>
                     </Link>

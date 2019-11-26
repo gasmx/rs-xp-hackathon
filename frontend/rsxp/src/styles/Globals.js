@@ -7,6 +7,10 @@ const globalStyles = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     html, body, #root {
         height: 100%;
     }

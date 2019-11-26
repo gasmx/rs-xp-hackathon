@@ -10,8 +10,14 @@ import {
     TextInfo,
     ImageInfo,
     CursosSection,
-    ContentCursos
+    ContentCursos,
+    Modal,
+    ModalContent
 } from './styles';
+
+import logica from '../../assets/logica.png';
+import html5 from '../../assets/html.png';
+import css from '../../assets/css.png';
 
 const Cursos = (props) => {
 
@@ -33,34 +39,28 @@ const Cursos = (props) => {
                         </ContentInfo>
                     </ContentIntroducao>
                 </Introducao>
-                <CursosSection>
+                <CursosSection id="cursos">
                     <Title>
                         Cursos
                     </Title>
                     <ContentCursos>
-                        <CardCurso urlimg="https://via.placeholder.com/100"
+                        <CardCurso urlimg={logica}
                             title="Lógica de Programação"
                             desc="Um curso que aborda os principais conceitos de Lógica de Programação."
                             button="Finalizado"
-                            colorButton="red"
+                            colorButton="#34556"
                         />
-                        <CardCurso urlimg="https://via.placeholder.com/100"
+                        <CardCurso urlimg={html5}
                             title="HTML 5"
                             desc="Você vai aprender como criar sites estáticos e personalizados."
                             button="Visualizar"
-                            colorButton="black"
+                            colorButton="#ff6800"
                         />
-                        <CardCurso urlimg="https://via.placeholder.com/100"
+                        <CardCurso urlimg={css}
                             title="CSS 3"
                             desc="Você vai aprender como criar sites estáticos e personalizados."
                             button="Visualizar"
-                            colorButton="black"
-                        />
-                        <CardCurso urlimg="https://via.placeholder.com/100"
-                            title="Javascript"
-                            desc="Vai aprender manipular páginas Web."
-                            button="Visualizar"
-                            colorButton="black"
+                            colorButton="#ff6800"
                         />
                     </ContentCursos>
                 </CursosSection>
