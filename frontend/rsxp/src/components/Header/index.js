@@ -20,7 +20,7 @@ export default function Header(props) {
                         <span>Vagas</span>
                     </Link>
                     <Button>
-                        <Link to="/logout">
+                        <Link to="/login">
                             <span>Logout</span>
                         </Link>
                     </Button>
