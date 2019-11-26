@@ -7,20 +7,22 @@ import history from '../../../services/history';
 import { signInSuccess, signFailure } from './actions';
 
 export function* signIn({ payload }) {
-  const { email, senha, tipoLogin } = payload;
+  const { email, senha, tipo_login } = payload;
 
   try {
     const response = yield call(api.post, 'login', {
       email,
       senha,
-      tipoLogin
+      tipo_login
     });
 
-    const { token, user } = response.data;
+    console.log(response)
 
-    api.defaults.headers.Authorization = `${token}`
+    const { usuario } = response.data;
 
-    yield put(signInSuccess(token, user));
+    //api.defaults.headers.Authorization = `${token}`
+
+    yield put(signInSuccess(usuario));
 
     history.push('/cursos');
 
