@@ -16,11 +16,36 @@ import {
     ModalContent
 } from './styles';
 
+
 import logica from '../../assets/logica.png';
 import html5 from '../../assets/html.png';
 import css from '../../assets/css.png';
 
-const Cursos = (props) => {
+export default function Cursos(props) {
+
+    const cursos = [
+        {
+            urlimg: logica,
+            title: "Lógica de Programação",
+            desc: "Um curso que aborda os principais conceitos de Lógica de Programação.",
+            button: "Finalizado",
+            colorButton: "#34556",
+        }, {
+
+            urlimg: html5,
+            title: "HTML 5",
+            desc: "Aprenda a fazer sites para internet.",
+            button: "Finalizado",
+            colorButton: "#ff6800",
+        },
+        {
+            urlimg: css,
+            title: "CSS 3",
+            desc: "CSS é uma forma de personalizar seu site de forma fácil e ilimitada.",
+            button: "Finalizado",
+            colorButton: "#ff6800",
+        }
+    ];
 
     return (
         <>
@@ -45,29 +70,17 @@ const Cursos = (props) => {
                         Cursos
                     </TitleCurso>
                     <ContentCursos>
-                        <CardCurso urlimg={logica}
-                            title="Lógica de Programação"
-                            desc="Um curso que aborda os principais conceitos de Lógica de Programação."
-                            button="Finalizado"
-                            colorButton="#34556"
-                        />
-                        <CardCurso urlimg={html5}
-                            title="HTML 5"
-                            desc="Você vai aprender como criar sites estáticos e personalizados."
-                            button="Visualizar"
-                            colorButton="#ff6800"
-                        />
-                        <CardCurso urlimg={css}
-                            title="CSS 3"
-                            desc="Você vai aprender como criar sites estáticos e personalizados."
-                            button="Visualizar"
-                            colorButton="#ff6800"
-                        />
+                        {cursos.map(cr => (
+                            <CardCurso urlimg={cr.urlimg}
+                                title={cr.title}
+                                desc={cr.desc}
+                                button={cr.button}
+                                colorButton={cr.colorButton}
+                            />
+                        ))}
                     </ContentCursos>
                 </CursosSection>
             </Container>
         </>
     );
 };
-
-export default Cursos;
