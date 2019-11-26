@@ -14,7 +14,7 @@ import VagasInfo from '../components/VagasInfo';
 export default function Routes() {
     return (
         <Switch>
-            <Route path="/" exact component={Main} />
+            <Route path="/" exact component={Login} />
             <Route path="/cadastro" component={Register} />
             <Route path="/login" component={Login} />
             <Route path="/cursos" component={Cursos} />
