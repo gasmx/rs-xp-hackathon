@@ -29,7 +29,7 @@ export const Logo = styled.span`
 
 export const Config = styled.div`
   span {
-      margin: 5px;
+      margin: 10px;
       color: #fff;
       font-size: 20px;
   }

@@ -5,6 +5,7 @@ import {
     Container,
     Introducao,
     Title,
+    TitleCurso,
     ContentIntroducao,
     ContentInfo,
     TextInfo,
@@ -40,9 +41,9 @@ const Cursos = (props) => {
                     </ContentIntroducao>
                 </Introducao>
                 <CursosSection id="cursos">
-                    <Title>
+                    <TitleCurso>
                         Cursos
-                    </Title>
+                    </TitleCurso>
                     <ContentCursos>
                         <CardCurso urlimg={logica}
                             title="Lógica de Programação"

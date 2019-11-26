@@ -9,7 +9,7 @@ export default function Header(props) {
             <Content>
                 <Logo>
                     <Link to="/">
-                        Devbaby
+                        Plataforma
                     </Link>
                 </Logo>
                 <Config>

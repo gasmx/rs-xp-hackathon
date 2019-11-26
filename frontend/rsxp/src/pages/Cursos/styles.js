@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import background from '../../assets/bg-home.jpeg';
+import background from '../../assets/bg2.png';
 
 export const Container = styled.div`
     width: 100%;
@@ -20,7 +20,17 @@ export const Title = styled.h1`
     max-width: 960px;
     margin: 0 auto;
     margin-bottom: 10px;
+    color: #fff;
+    padding: 10px;
+`;
+
+export const TitleCurso = styled.h1`
+    font-size: 30px;
+    max-width: 960px;
+    margin: 0 auto;
+    margin-bottom: 10px;
     color: #000;
+    padding: 10px;
 `;
 
 export const ContentIntroducao = styled.div`
@@ -30,6 +40,7 @@ export const ContentIntroducao = styled.div`
     max-width: 960px;
     margin: 0 auto;
     padding-bottom: 10px;
+    padding: 10px;
 
 `;
 
@@ -42,7 +53,7 @@ export const TextInfo = styled.h1`
     font-size: 17px;
     text-align: justify;
     text-indent: 50px;
-    color: #000;
+    color: #fff;
     line-height: 190%;
 `;
 
