@@ -8,7 +8,7 @@ export const Card = styled.div`
     border-radius: 5px;
     padding: 10px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
+    margin: 20px;
 `;
 
 export const CardImage = styled.img`
@@ -37,6 +37,7 @@ export const Button = styled.button`
     padding: 10px;
     background: ${props => props.color};
     color: #fff;
+    font-weight: bold;
 `;
 
 export const Title = styled.h1`
