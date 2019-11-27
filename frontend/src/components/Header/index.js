@@ -3,14 +3,17 @@ import { Link } from 'react-router-dom'
 
 import { Wrapper, Content, Logo, Config, Button } from './styles';
 
+import logo from '../../assets/logo.svg'
+
 export default function Header({ urlCourse }) {
     return (
         <Wrapper>
             <Content>
                 <Logo>
-                    <Link to={urlCourse}>
+                    <img src={logo} width="200" height="100"/>
+                    {/* <Link to={urlCourse}>
                         Plataforma
-                    </Link>
+                    </Link> */}
                 </Logo>
                 <Config>
                     <Link to="/cursos">
