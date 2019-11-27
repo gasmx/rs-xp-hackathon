@@ -7,6 +7,7 @@ import Register from '../pages/Register';
 import Login from '../pages/Login';
 import Cursos from '../pages/Cursos';
 import Vagas from '../pages/Vagas';
+import VagasCadastro from '../pages/VagasCadastro';
 import Error from '../pages/Error';
 
 import VagasInfo from '../components/VagasInfo';
@@ -20,6 +21,7 @@ export default function Routes() {
             <Route path="/cursos" component={Cursos} />
             <Route path="/vagas" exact component={Vagas} />
             <Route path="/vagas/:id" component={VagasInfo} />
+            <Route path="/vagas-cadastro" component={VagasCadastro} />
             <Route component={Error} />
         </Switch>
     );

@@ -13,11 +13,14 @@ export default function Header(props) {
                     </Link>
                 </Logo>
                 <Config>
-                    <a href="#cursos">
+                    <Link to="/cursos">
                         <span>Cursos</span>
-                    </a>
+                    </Link>
                     <Link to="/vagas">
                         <span>Vagas</span>
+                    </Link>
+                    <Link to="/vagas-cadastro">
+                        <span>Cadastro de vagas</span>
                     </Link>
                     <Button>
                         <Link to="/login">
