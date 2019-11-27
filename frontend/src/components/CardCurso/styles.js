@@ -10,12 +10,19 @@ export const Card = styled.div`
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     margin: 20px;
     position: relative;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+    }
 `;
 
 export const CardImage = styled.img`
     width: 100%;
     flex: 1;
     margin: 10px;
+    border-radius: 4px;
 `;
 
 export const CardInfo = styled.div`

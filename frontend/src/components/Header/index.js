@@ -3,21 +3,24 @@ import { Link } from 'react-router-dom'
 
 import { Wrapper, Content, Logo, Config, Button } from './styles';
 
-export default function Header(props) {
+export default function Header({ urlCourse }) {
     return (
         <Wrapper>
             <Content>
                 <Logo>
-                    <Link to="/">
+                    <Link to={urlCourse}>
                         Plataforma
                     </Link>
                 </Logo>
                 <Config>
-                    <a href="#cursos">
+                    <Link to="/cursos">
                         <span>Cursos</span>
-                    </a>
+                    </Link>
                     <Link to="/vagas">
                         <span>Vagas</span>
+                    </Link>
+                    <Link to="/vagas-cadastro">
+                        <span>Cadastro de vagas</span>
                     </Link>
                     <Button>
                         <Link to="/login">

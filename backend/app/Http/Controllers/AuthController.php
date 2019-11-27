@@ -30,7 +30,7 @@ class AuthController extends Controller
                     throw new Exception('Tipo de login não configurado');
             }
 
-            $response = ['message' => 'Login efetuado com sucesso.', 'code' => 200];
+            $response = ['message' => 'Login efetuado com sucesso.', 'code' => 200, 'usuario' => $usuario];
         } catch (Exception $e) {
             $response = ['message' => $e->getMessage(), 'code' => 401];
         }
