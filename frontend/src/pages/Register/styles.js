@@ -5,25 +5,71 @@ import background from '../../assets/bg-home.jpeg';
 export const Container = styled.div`
   display: flex;
   flex: 1;
-  height: 100vh;
 
   justify-content: center;
   align-items: center;
 
   background: url(${background}) no-repeat;
   background-size: cover;
+
+  flex-direction: column;
+
+  padding: 20px 0;
 `;
 
-export const ContainerLogin = styled.div`
+export const ContainerCadastro = styled.div`
   display: flex;
   flex-direction: column;
   width: 30%;
 `;
 
+export const Tabs = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+`;
+
+export const TabEstudante = styled.div`
+  display: flex;
+  background-color: ${props => props.background ? '#14bf98' : '#ddd'};
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 4px;
+  cursor: pointer;
+  margin-bottom: -15px;
+  padding: 10px;
+`;
+
+export const TabEstudanteText = styled.p`
+  font-size: 16px;
+  font-weight: bold;
+  color: ${props => props.color ? '#fff' : '#333'};
+`;
+
+export const TabEmpresa = styled(TabEstudante)`
+  /* display: flex;
+  background-color: ${props => props.background ? '#14bf98' : '#ddd'};
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+  margin-bottom: -15px;
+  padding: 10px; */
+`;
+
+export const TabEmpresaText = styled(TabEstudanteText)`
+   /* font-size: 16px;
+  font-weight: bold;
+  color: ${props => props.color ? '#fff' : '#333'}; */
+`;
+
 export const Formulario = styled.form`
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   padding: 20px;
 
   display: flex;
@@ -79,4 +125,11 @@ export const SubmitLogin = styled.button`
   font-size: 16px;
   font-weight: bold;
   margin-top: 20px;
+`;
+
+export const CriarConta = styled.h2`
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
 `;

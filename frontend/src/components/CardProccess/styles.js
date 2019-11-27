@@ -8,7 +8,9 @@ export const Card = styled.div`
     border-radius: 5px;
     padding: 10px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
 `;
 
 export const CardImage = styled.img`
@@ -27,7 +29,11 @@ export const CardButton = styled.div`
     flex: 1;
     width: 100%;
     height: 100%;
-    align-items: flex-end;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
 `;
 
 export const Button = styled.button`
@@ -48,4 +54,19 @@ export const Title = styled.h1`
 export const Description = styled.h2`
     color: #777;
     font-size: 15px;
+`;
+
+export const Percentage = styled.div`
+    background-color: ${props => props.background};
+    height: 10px;
+    border-radius: 4px;
+    width: ${props => props.percentage};
+    margin-top: 10px;
+    border: 1px solid #ddd;
+`;
+
+export const PercentageNumber = styled.p`
+    font-size: 18px;
+    font-weight: bold;
+    color: #999;
 `;

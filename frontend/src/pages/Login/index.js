@@ -1,18 +1,21 @@
 import React from 'react';
 
-
-
 import {
     Container,
     ContainerLogin,
     Formulario,
     Info,
     SubmitLogin,
+    CriarConta,
 } from './styles';
 
 export default function Login({ history }) {
-    async function submit(e) {
+    function acessar() {
         history.push("/cursos");
+    }
+
+    function irParaCriarConta() {
+        history.push("/cadastro");
     }
 
     return (
@@ -33,9 +36,11 @@ export default function Login({ history }) {
                         <label>Senha</label>
                         <input id="senha" type="password" />
                     </Info>
-                    <SubmitLogin type="submit" onClick={submit}>Acessar</SubmitLogin>
+                    <SubmitLogin type="submit" onClick={acessar}>Acessar</SubmitLogin>
                 </Formulario>
             </ContainerLogin>
+
+            <CriarConta onClick={irParaCriarConta}>Cria nova conta</CriarConta>
         </Container>
     );
 };

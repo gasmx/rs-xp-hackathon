@@ -21,29 +21,47 @@ import logica from '../../assets/logica.png';
 import html5 from '../../assets/html.png';
 import css from '../../assets/css.png';
 
-export default function Cursos(props) {
-
+export default function Cursos({ history }) {
     const cursos = [
         {
+            id: 1,
             urlimg: logica,
             title: "Lógica de Programação",
             desc: "Um curso que aborda os principais conceitos de Lógica de Programação.",
             button: "Finalizado",
-            colorButton: "#34556",
-        }, {
-
+            colorButton: "#32CD32",
+            percentageBackground: "#DA70D6",
+            percentageNumber: "100%",
+        },
+        {
+            id: 2,
             urlimg: html5,
             title: "HTML 5",
             desc: "Aprenda a fazer sites para internet.",
-            button: "Finalizado",
-            colorButton: "#ff6800",
+            button: "Em andamento",
+            colorButton: "#FFD700",
+            percentageBackground: "#ff6800",
+            percentageNumber: "70%",
         },
         {
+            id: 3,
             urlimg: css,
             title: "CSS 3",
             desc: "CSS é uma forma de personalizar seu site de forma fácil e ilimitada.",
-            button: "Finalizado",
-            colorButton: "#ff6800",
+            button: "Em andamento",
+            colorButton: "#FFD700",
+            percentageBackground: "#1E90FF",
+            percentageNumber: "30%",
+        },
+        {
+            id: 4,
+            urlimg: css,
+            title: "JavaScript",
+            desc: "CSS é uma forma de personalizar seu site de forma fácil e ilimitada.",
+            button: "Iniciar",
+            colorButton: "#4682B4",
+            percentageBackground: "#FFD700",
+            percentageNumber: "0%",
         }
     ];
 
@@ -71,11 +89,16 @@ export default function Cursos(props) {
                     </TitleCurso>
                     <ContentCursos>
                         {cursos.map(cr => (
-                            <CardCurso urlimg={cr.urlimg}
+                            <CardCurso
+                                key={cr.id}
+                                urlimg={cr.urlimg}
                                 title={cr.title}
                                 desc={cr.desc}
                                 button={cr.button}
                                 colorButton={cr.colorButton}
+                                percentageBackground={cr.percentageBackground}
+                                percentageNumber={cr.percentageNumber}
+                                history={history}
                             />
                         ))}
                     </ContentCursos>
