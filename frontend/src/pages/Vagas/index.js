@@ -1,15 +1,72 @@
 import React from 'react';
 import HeaderComponent from '../../components/Header';
-import { Container, Succes, Image, Title, Description, Intro, Content } from './styles';
+import {
+    Container, Succes, Image, Title, Description, Intro, Content,
+    Close,
+    ContainerModal,
+    TitleModal,
+    DescriptionModal,
+    ButtonModal
+} from './styles';
 
 import CardVagas from '../../components/CardVagas';
 import CardProccess from '../../components/CardProccess';
 
+import Modal from 'react-modal';
+
 const Vagas = () => {
+
+    const [modalIsOpen, setIsOpen] = React.useState(true);
+
+    const modalStyles = {
+        content: {
+            width: '70%',
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)'
+        }
+    };
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
+
     return (
         <>
             <HeaderComponent />
             <Container>
+
+                <Modal
+                    isOpen={modalIsOpen}
+                    onAfterOpen={() => null}
+                    onRequestClose={closeModal}
+                    style={modalStyles}
+                    contentLabel="Vaga"
+                >
+                    <Close onClick={closeModal}>
+                        X
+                    </Close>
+                    <ContainerModal>
+                        <TitleModal>
+                            Otíma notícia!!
+                        </TitleModal>
+                        <DescriptionModal>
+                            A empresa Novatic gostou do seu perfil e quer te conhecer melhor! Estamos te encaminhando um email com todas as informações e instruções.
+                        </DescriptionModal>
+                        <ButtonModal onClick={closeModal}>
+                            OK! Entendi
+                        </ButtonModal>
+                    </ContainerModal>
+                </Modal>
+
                 <Intro>
                     <Title>Suas Oportunidades</Title>
                     <Description>Vagas que se encaixam com seu perfil.</Description>
@@ -100,11 +157,11 @@ const Vagas = () => {
                         title="Web Designer"
                         desc="Suporte para usuários em plataforma web"
                         end="Rua Apolônio Pint0 164"
-                        empresa="Empresa - Não leia os termos."
+                        empresa="Empresa - Novatic."
                         button="Participar"
                         colorButton="gray"
                         percentageBackground="#14bf98"
-                        percentageNumber="20%"
+                        percentageNumber="5%"
                     />
                 </Content>
             </Container>

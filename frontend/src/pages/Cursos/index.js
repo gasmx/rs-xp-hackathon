@@ -11,15 +11,15 @@ import {
     TextInfo,
     ImageInfo,
     CursosSection,
-    ContentCursos,
-    Modal,
-    ModalContent
+    ContentCursos
 } from './styles';
 
 
 import logica from '../../assets/logica.png';
 import html5 from '../../assets/html.png';
 import css from '../../assets/css.png';
+
+import Modal from 'react-modal';
 
 export default function Cursos({ history }) {
     const cursos = [
@@ -65,45 +65,67 @@ export default function Cursos({ history }) {
         }
     ];
 
+    const [modalIsOpen, setIsOpen] = React.useState(true);
+
+    const modalStyles = {
+        content: {
+            width: '70%',
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)'
+        }
+    };
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
     return (
         <>
             <HeaderComponent />
             <Container>
-                <Introducao>
-                    <Title>
-                        Introdução
+                    <Introducao>
+                        <Title>
+                            Introdução
                     </Title>
-                    <ContentIntroducao>
-                        <ContentInfo>
-                            <TextInfo>
-                                Aqui você tem acesso a cursos que vão te preparar para o mercado de trabalho como estagiário, onde a partir deste ponto vai te fazer decolar na sua carreira.
+                        <ContentIntroducao>
+                            <ContentInfo>
+                                <TextInfo>
+                                    Aqui você tem acesso a cursos que vão te preparar para o mercado de trabalho como estagiário, onde a partir deste ponto vai te fazer decolar na sua carreira.
     
-    Sendo cursos de alta qualidade e credibilidade e, totalmente grátis, online e com Certificado Digital Gratuito!
+        Sendo cursos de alta qualidade e credibilidade e, totalmente grátis, online e com Certificado Digital Gratuito!
                             </TextInfo>
-                        </ContentInfo>
-                    </ContentIntroducao>
-                </Introducao>
-                <CursosSection id="cursos">
-                    <TitleCurso>
-                        Cursos
+                            </ContentInfo>
+                        </ContentIntroducao>
+                    </Introducao>
+                    <CursosSection id="cursos">
+                        <TitleCurso>
+                            Cursos
                     </TitleCurso>
-                    <ContentCursos>
-                        {cursos.map(cr => (
-                            <CardCurso
-                                key={cr.id}
-                                urlimg={cr.urlimg}
-                                title={cr.title}
-                                desc={cr.desc}
-                                button={cr.button}
-                                colorButton={cr.colorButton}
-                                percentageBackground={cr.percentageBackground}
-                                percentageNumber={cr.percentageNumber}
-                                history={history}
-                            />
-                        ))}
-                    </ContentCursos>
-                </CursosSection>
+                        <ContentCursos>
+                            {cursos.map(cr => (
+                                <CardCurso
+                                    key={cr.id}
+                                    urlimg={cr.urlimg}
+                                    title={cr.title}
+                                    desc={cr.desc}
+                                    button={cr.button}
+                                    colorButton={cr.colorButton}
+                                    percentageBackground={cr.percentageBackground}
+                                    percentageNumber={cr.percentageNumber}
+                                    history={history}
+                                />
+                            ))}
+                        </ContentCursos>
+                    </CursosSection>
             </Container>
         </>
-    );
-};
+            );
+        };
