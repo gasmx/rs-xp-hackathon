@@ -27,7 +27,7 @@ const CardVagas = (props) => {
                 <Description>{props.valor}</Description>
             </CardInfo>
             {props.noButton && (
-                <CardButton>
+                <CardButton onClick={props.participarAt}>
                     <Button color={color} >{props.button}</Button>
                 </CardButton>
             )}

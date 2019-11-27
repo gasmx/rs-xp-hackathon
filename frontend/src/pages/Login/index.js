@@ -10,8 +10,17 @@ import {
 } from './styles';
 
 export default function Login({ history }) {
-    function acessar() {
-        history.push("/cursos");
+
+    const [select, setSelect] = React.useState('');
+
+    function acessar(e) {
+        const tipo = document.getElementById("tipo").value
+
+        if (tipo == "estudante") {
+            history.push("/cursos");
+        } else {
+            history.push("/empresa/vagas-cadastro");
+        }
     }
 
     function irParaCriarConta() {
@@ -24,7 +33,7 @@ export default function Login({ history }) {
                 <Formulario >
                     <h1>Login</h1>
                     <label>Acessar como</label>
-                    <select>
+                    <select id="tipo">
                         <option value="estudante">Estudante</option>
                         <option value="empresa">Empresa</option>
                     </select>

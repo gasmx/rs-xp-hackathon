@@ -16,7 +16,10 @@ import Modal from 'react-modal';
 
 const Vagas = () => {
 
-    const [modalIsOpen, setIsOpen] = React.useState(true);
+    const [button, setButton] = React.useState('Participar');
+    const [colorButton, setcolorButton] = React.useState('#14bf98');
+
+    const [modalIsOpen, setIsOpen] = React.useState(false);
 
     const modalStyles = {
         content: {
@@ -36,6 +39,16 @@ const Vagas = () => {
 
     function closeModal() {
         setIsOpen(false);
+    }
+
+    function participar() {
+        alert('Beleza! Você está participando!');
+        setButton('Participando');
+        setcolorButton("#999");
+
+        setTimeout(() => {
+            setIsOpen(true);
+        }, 6000)
     }
 
 
@@ -80,8 +93,9 @@ const Vagas = () => {
                         desc="Criar páginas estáticas"
                         end="Rua Apolônio Pint0 164"
                         empresa="Empresa - Não leia os termos."
-                        button="Participando"
-                        colorButton="#999"
+                        button={button}
+                        colorButton={colorButton}
+                        participarAt={participar}
                     />
                     <CardVagas
                         opacidade="1"

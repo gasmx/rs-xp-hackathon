@@ -38,7 +38,7 @@ export const Config = styled.div`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   height: 20;
   background: #14bf98;
   border: none;
