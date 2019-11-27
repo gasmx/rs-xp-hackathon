@@ -13,11 +13,11 @@ export default function Header({ urlCourse }) {
                     </Link>
                 </Logo>
                 <Config>
-                    <Link to="/cursos">
-                        <span>Cursos</span>
+                    <Link to="/empresa/vagas-cadastro">
+                        <span>Minhas Vagas</span>
                     </Link>
-                    <Link to="/vagas">
-                        <span>Vagas</span>
+                    <Link to="/empresa/vagas-cadastro">
+                        <span>Processos</span>
                     </Link>
                     <Button>
                         <Link to="/login">

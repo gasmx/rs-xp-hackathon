@@ -23,7 +23,7 @@ export default function Routes() {
             <Route path="/curso/:nome" component={CursoDetalhe} />
             <Route path="/vagas" exact component={Vagas} />
             <Route path="/vagas/:id" component={VagasInfo} />
-            <Route path="/vagas-cadastro" component={VagasCadastro} />
+            <Route path="/empresa/vagas-cadastro" component={VagasCadastro} />
             <Route component={Error} />
         </Switch>
     );

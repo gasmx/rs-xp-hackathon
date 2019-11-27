@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import HeaderComponent from '../../components/Header';
+import HeaderComponent from '../../components/HeaderEmpresa';
 import {
     Container,
     TitleVagasCadastro,
@@ -51,14 +51,14 @@ const VagasCadastro = () => {
     const [vagaSelecionada, setVagaSelecionada] = useState(vagaPadrao);
 
     const modalStyles = {
-        content : {
-            width                 : '70%',
-            top                   : '50%',
-            left                  : '50%',
-            right                 : 'auto',
-            bottom                : 'auto',
-            marginRight           : '-50%',
-            transform             : 'translate(-50%, -50%)'
+        content: {
+            width: '70%',
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)'
         }
     };
 
@@ -134,7 +134,7 @@ const VagasCadastro = () => {
         // subtitle.style.color = '#f00';
     }
 
-    function closeModal(){
+    function closeModal() {
         setIsOpen(false);
     }
 
@@ -147,7 +147,7 @@ const VagasCadastro = () => {
                 style={modalStyles}
                 contentLabel="Vaga"
             >
-                <h3>{ vagaSelecionada.name }</h3>
+                <h3>{vagaSelecionada.name}</h3>
 
                 <hr />
 
@@ -156,18 +156,18 @@ const VagasCadastro = () => {
                         <form>
                             <div class="form-group">
                                 <label><b>Descrição</b></label>
-                                <label>{ vagaSelecionada.description }</label>
+                                <label>{vagaSelecionada.description}</label>
                             </div>
                             <div class="form-group">
                                 <label><b>Período</b></label>
-                                <label>{ vagaSelecionada.period }</label>
+                                <label>{vagaSelecionada.period}</label>
                             </div>
                             <div class="form-group">
                                 <label><b>Pre requisitos</b></label>
-                                <br/>
+                                <br />
                                 <label>
                                     {vagaSelecionada.prerequisites.map(pr => (
-                                        <PrerequisiteImage src={pr.icon} title={pr.title} alt={pr.title}/>
+                                        <PrerequisiteImage src={pr.icon} title={pr.title} alt={pr.title} />
                                     ))}
                                 </label>
                             </div>
@@ -181,12 +181,12 @@ const VagasCadastro = () => {
                                 <li class="list-group-item">
                                     <ContainerCandidatoItem>
                                         <ContainerCandidatoItemInfo class="form-group">
-                                            <label><b>Nome</b></label><br/>
-                                            <label>{ c.name }</label>
+                                            <label><b>Nome</b></label><br />
+                                            <label>{c.name}</label>
                                         </ContainerCandidatoItemInfo>
                                         <ContainerCandidatoItemInfo class="form-group">
-                                            <label><b>Idade</b></label><br/>
-                                            <label>{ c.age }</label>
+                                            <label><b>Idade</b></label><br />
+                                            <label>{c.age}</label>
                                         </ContainerCandidatoItemInfo>
                                         <div style={{ width: '100%' }}>
                                             <BotaoMatch className="btn btn-sm btn-success">
@@ -199,7 +199,7 @@ const VagasCadastro = () => {
                         </ListaCandidatos>
                     </Candidatos>
                 </ContainerVagaDetalhe>
-                
+
                 <button className="btn btn-sm btn-secondary" onClick={closeModal}>Voltar</button>
             </Modal>
 
@@ -214,7 +214,7 @@ const VagasCadastro = () => {
                         Abrir nova vaga
                     </BotaoNovo>
                 </ContentBotoes>
-                <hr/>
+                <hr />
                 <CadastroSection>
                     <ContentCadastro>
                         {vagas.map(v => (
@@ -234,7 +234,7 @@ const VagasCadastro = () => {
                                 </h6>
 
                                 {v.prerequisites.map(pr => (
-                                   <PrerequisiteImage src={pr.icon} title={pr.title} alt={pr.title}/>
+                                    <PrerequisiteImage src={pr.icon} title={pr.title} alt={pr.title} />
                                 ))}
 
                                 {v.candidate_quantity > 0 &&
