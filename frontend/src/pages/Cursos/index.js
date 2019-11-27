@@ -73,10 +73,10 @@ export default function Cursos(props) {
                     <ContentIntroducao>
                         <ContentInfo>
                             <TextInfo>
-                                Anim sint laboris eu elit dolore do pariatur excepteur enim dolore ullamco do pariatur. Minim occaecat quis elit veniam deserunt laboris nostrud sunt veniam aliqua voluptate occaecat irure. Consectetur non deserunt deserunt Lorem officia officia culpa.
-                                Anim sint laboris eu elit dolore do pariatur excepteur enim dolore ullamco do pariatur. Minim occaecat quis elit veniam deserunt laboris nostrud sunt veniam aliqua voluptate occaecat irure. Consectetur non deserunt deserunt Lorem officia officia culpa.
-                                Anim sint laboris eu elit dolore do pariatur excepteur enim dolore ullamco do pariatur. Minim occaecat quis elit veniam deserunt laboris nostrud sunt veniam aliqua voluptate occaecat irure. Consectetur non deserunt deserunt Lorem officia officia culpa.
-                        </TextInfo>
+                                Aqui você tem acesso a cursos que vão te preparar para o mercado de trabalho como estagiário, onde a partir deste ponto vai te fazer decolar na sua carreira.
+    
+    Sendo cursos de alta qualidade e credibilidade e, totalmente grátis, online e com Certificado Digital Gratuito!
+                            </TextInfo>
                         </ContentInfo>
                     </ContentIntroducao>
                 </Introducao>
