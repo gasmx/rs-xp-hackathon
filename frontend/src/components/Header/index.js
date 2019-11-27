@@ -8,7 +8,7 @@ export default function Header({ urlCourse }) {
         <Wrapper>
             <Content>
                 <Logo>
-                    <Link to="/">
+                    <Link to={urlCourse}>
                         Plataforma
                     </Link>
                 </Logo>
