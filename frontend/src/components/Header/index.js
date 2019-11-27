@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { Wrapper, Content, Logo, Config, Button } from './styles';
 
-export default function Header(props) {
+export default function Header({ urlCourse }) {
     return (
         <Wrapper>
             <Content>
@@ -13,7 +13,7 @@ export default function Header(props) {
                     </Link>
                 </Logo>
                 <Config>
-                    <a href="#cursos">
+                    <a href={urlCourse}>
                         <span>Cursos</span>
                     </a>
                     <Link to="/vagas">

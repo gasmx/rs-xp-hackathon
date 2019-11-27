@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
     Card,
     CardImage,
@@ -12,11 +13,15 @@ import {
 } from './styles';
 
 const CardCurso = (props) => {
-
     const color = props.colorButton;
+    const { history } = props;
+
+    function openDetailCourse() {
+        history.push(`/curso/${props.title}`);
+    }
 
     return (
-        <Card>
+        <Card onClick={openDetailCourse}>
             <CardImage src={props.urlimg} />
             <CardInfo>
                 <Title>{props.title}</Title>
