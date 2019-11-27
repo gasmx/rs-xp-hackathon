@@ -5,9 +5,8 @@ export const Wrapper = styled.header`
   flex: 1;
   justify-content: center;
   align-items: center;
-  height: 60px;
   background: #113448;
-  padding: 0 10px;
+  padding: 10px 10px;
 `;
 
 export const Content = styled.div`
