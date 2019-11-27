@@ -12,6 +12,8 @@ export const Container = styled.div`
 
   background: url(${background}) no-repeat;
   background-size: cover;
+
+  flex-direction: column;
 `;
 
 export const ContainerLogin = styled.div`
@@ -79,4 +81,11 @@ export const SubmitLogin = styled.button`
   font-size: 16px;
   font-weight: bold;
   margin-top: 20px;
+`;
+
+export const CriarConta = styled.h2`
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
 `;

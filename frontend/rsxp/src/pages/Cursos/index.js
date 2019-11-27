@@ -29,21 +29,36 @@ export default function Cursos(props) {
             title: "Lógica de Programação",
             desc: "Um curso que aborda os principais conceitos de Lógica de Programação.",
             button: "Finalizado",
-            colorButton: "#34556",
+            colorButton: "#32CD32",
+            percentageBackground: "#DA70D6",
+            percentageNumber: "100%",
         }, {
 
             urlimg: html5,
             title: "HTML 5",
             desc: "Aprenda a fazer sites para internet.",
-            button: "Finalizado",
-            colorButton: "#ff6800",
+            button: "Em andamento",
+            colorButton: "#FFD700",
+            percentageBackground: "#ff6800",
+            percentageNumber: "70%",
         },
         {
             urlimg: css,
             title: "CSS 3",
             desc: "CSS é uma forma de personalizar seu site de forma fácil e ilimitada.",
-            button: "Finalizado",
-            colorButton: "#ff6800",
+            button: "Em andamento",
+            colorButton: "#FFD700",
+            percentageBackground: "#1E90FF",
+            percentageNumber: "30%",
+        },
+        {
+            urlimg: css,
+            title: "JavaScript",
+            desc: "CSS é uma forma de personalizar seu site de forma fácil e ilimitada.",
+            button: "Iniciar",
+            colorButton: "#4682B4",
+            percentageBackground: "#FFD700",
+            percentageNumber: "0%",
         }
     ];
 
@@ -76,6 +91,8 @@ export default function Cursos(props) {
                                 desc={cr.desc}
                                 button={cr.button}
                                 colorButton={cr.colorButton}
+                                percentageBackground={cr.percentageBackground}
+                                percentageNumber={cr.percentageNumber}
                             />
                         ))}
                     </ContentCursos>
